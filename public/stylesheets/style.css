@@ -1,8 +1,41 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color:lightgrey;
 }
-
+#welcomeText
+{
+padding:10px;
+text-align:center;
+border:solid darkgrey;
+border-radius: 5px;
+}
 a {
   color: #00B7FF;
+}
+img {
+width: 22%;
+margin-bottom:12px;
+}
+#messageDiv {
+text-align:center;
+}
+#indexMsg
+{
+font-size:20px;
+color: darkgrey;
+position: fixed;
+bottom: 0px;
+left:0px;
+text-align:center;
+width:100%;
+background-color: #36454F;
+padding: 10px;
+}
+#links
+{
+position:fixed;
+top: 20px;
+right: 20px;
+padding:10px;
 }

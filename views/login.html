@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Login Screen</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" href="http://www.stickpng.com/assets/thumbs/584c4c131fc21103bb375baa.png">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+</head>
+
+<body>
+	<h1>Welcome to Memechat, The snapchat for Memes<h1>
+	<h3>Please Log In or create a new profile!<h3>
+    <div class="form-container">
+        <form method="POST" action="/login">
+            <label>Username:</label>
+            <input type="text" id="username" name="username"><br>
+            <label>Password:</label>
+            <input type="password" id="password" name="password"><br>
+            <input type="submit" id="login" value="Login">
+        </form>
+    </div>
+<br>
+    <a id="signUpLink" href="/signup">Sign Up Here</a>
+    <hr>
+    <span id="loginMsg">
+    <%= msg %>
+    </span>
+</body>
+
+</html>

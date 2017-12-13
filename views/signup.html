@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Sign Up</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" href="http://www.stickpng.com/assets/thumbs/584c4c131fc21103bb375baa.png">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+</head>
+
+<body>
+<h1>Sign up for MemeChat Here!<h1>
+    <div class="form-container">
+        <form method="POST" action="/signup">
+            <label>Username:</label>
+            <input type="text" id="username" name="username"><br>
+            <label>Password:</label>
+            <input type="password" id="password" name="password"><br>
+            <label>Email:</label>
+            <input type="email" id="email" name="email"><br>
+            <input type="submit" id="register" value="Register">
+        </form>
+    </div>
+    <hr>
+    <span id="signupMsg">
+    <%= msg %>
+    </span>
+</body>
+
+</html>

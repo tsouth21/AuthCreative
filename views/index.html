@@ -1,0 +1,44 @@
+<!doctype html>
+<html ng-app="myApp">
+
+<head>
+    <title>MemeChat (A snapchat immitation)</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" href="http://www.stickpng.com/assets/thumbs/584c4c131fc21103bb375baa.png">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <div ng-controller="myController">
+        <h2 id="welcomeText">Welcome to MemeChat. You are Logged In as
+            <%= username %>!
+        </h2>
+	<h3>To send a MemeChat to a friend, input their exact username and an image URL below. <h3>
+	<h3>Please refresh your page to see any memes sent to you.<h3>
+        <div id="links"><a id="logoutLink" href="/logout">Logout</a>
+        <a id="editLink" href="/user">Edit User</a><br>
+<!--	<a id="usernamesLink" href="/profiles">Look Up A Username</a> --> </div>
+	<div class="formContainer">
+          <form id="sendForm" ng-submit="sendMessage()">
+                <input value="<%= username %>" ng-model="fromUser" hidden></input>
+                <input type="text" ng-model="toUser" placeholder="Send to who?"></input>
+                <input type="text" ng-model="url" placeholder="Image URL"></input>
+                <button type="submit" value="submit">Send Snap</button>
+          </form>
+        </div>
+<hr><hr>
+        <div ng-repeat="message in messages | filter: {toUser: '<%= username %>'}" id="messageDiv">
+Here is your meme from {{message.fromUser}}: <br>
+	<img ng-src="{{message.url}}" />
+	</div>
+    <hr>
+    <span id="indexMsg">
+        <%= msg %>
+    </span>
+    <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+    <script src="/javascripts/my_app.js"></script>
+</body>
+
+</html>
+
